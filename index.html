@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap"
+            rel="stylesheet"
+    />
+    <meta name="description" content="My Portfolio website" />
+    <meta name="keywords" content="web design, html, css, js" />
+    <title>Sayapina Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+<!--START HEADER-->
+<header class="header container">
+    <nav>
+        <ul class="header__menu">
+            <li>
+                <a class="header__link" href="#about">Обо мне</a>
+            </li>
+            <li>
+                <a class="header__link" href="#featured">Работа</a>
+            </li>
+            <li>
+                <a class="header__link" href="#contact">Контактные данные</a>
+            </li>
+            <li class="header__line"></li>
+            <li>
+                <button
+                        aria-label="theme-toggle btn"
+                        id="theme-toggle1"
+                        class="header__sun"
+                >
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                    >
+                        <path
+                                d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                        />
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <a class="header__resume btn" href="#">Резюме</a>
+            </li>
+        </ul>
+        <button aria-label="mobile nav button" class="header__bars">
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+            >
+                <path
+                        fill-rule="evenodd"
+                        d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                        clip-rule="evenodd"
+                />
+            </svg>
+        </button>
+    </nav>
+</header>
+<!--END HEADER-->
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav">
+    <nav>
+        <ul class="mobile-nav__menu">
+            <li>
+                <a class="mobile-nav__link" href="#about">Обо мне</a>
+            </li>
+            <li>
+                <a class="mobile-nav__link" href="#featured">Работа</a>
+            </li>
+            <li>
+                <a class="mobile-nav__link" href="#contact">Контактные данные</a>
+            </li>
+            <li class="mobile-nav__link-line"></li>
+            <li>
+                <button
+                        aria-label="theme-toggle btn"
+                        id="theme-toggle"
+                        class="mobile-nav__sun"
+                >
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                    >
+                        <path
+                                d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                        />
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <a class="mobile-nav__btn btn" href="#">Резюме</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- End of Mobile Navigation -->
+<main>
+    <section class="hero container">
+        <img class="hero__img" src="public/my.png" alt="Profile picture" />
+        <h2 class="hero__subtitle">Привет, я Валентина 👋</h2>
+        <h1 class="hero__title">
+            FRONT-END <br />
+            WEB РАЗРАБОТЧИК.
+        </h1>
+        <p class="hero__description">
+            Целеустремленная <strong>Frontend / Fullstack</strong> web
+            разработчица и <strong>UI/UX</strong>
+            специалист, создающий интерактивные сайты/приложения. А уж дизайн — моё хобби.
+        </p>
+        <a class="hero__btn btn" href="#">Узнать больше</a>
+    </section>
+    <section id="about" class="about container section">
+        <div class="about__content">
+            <h2 class="about__title">Обо мне</h2>
+            <p class="about__description">
+                Привет! Меня зовут Валентина. Я
+                <strong>Frontend / Fullstack</strong> web разработчик. Проживаю в Москве. Я просыпаюсь утром, завариваю себе кофе,
+                запускаю свой компьютер и создаю проекты, дабы набить скилл.
+            </p>
+            <p class="about__description">
+                Мои родные и близкие говорят, что я создаю удивительные вещи, и это справедливо, ведь мне по-нраву создавать то, что нравится не только мне, но и народу.
+            </p>
+            <p class="about__description">
+                Недавно я закончила колледж предпринимательства №11 и поступила в ВУЗ. И теперь я ищу работу, чтобы
+                <a>расти и развиваться</a> в профессиональном плане.
+            </p>
+            <hr class="about__hr" />
+            <h3 class="about__subtitle">Стэк технологий</h3>
+            <div class="about__ul-container">
+                <ul class="about__ul">
+                    <li class="about__list">JavaScript (ES6+)</li>
+                    <li class="about__list">CSS</li>
+                    <li class="about__list">HTML</li>
+                </ul>
+                <ul class="about__ul">
+                    <li class="about__list">ReactJS</li>
+                    <li class="about__list">NodeJS</li>
+                    <li class="about__list">Angular</li>
+                </ul>
+            </div>
+        </div>
+        <div class="about__img-wrapper">
+            <img
+                    class="about__img lazy loading"
+                    src="https://via.placeholder.com/1200x1600"
+                    data-src="/myphoto.jpg"
+                    alt="Profile picture"
+            />
+        </div>
+    </section>
+    <section id="featured" class="featured container section">
+        <h3 class="featured__subtitle">Проект над которым я работаю сейчас</h3>
+        <div class="featured__wrapper">
+            <h2 class="featured__title">Rubik's Cube World Cup</h2>
+            <a
+                    aria-label="link featured projects"
+                    class="featured__link"
+                    href="#"
+            >
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                >
+                    <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                    />
+                </svg>
+            </a>
+        </div>
+        <p class="featured__description">
+            Cillum voluptate tempor cillum culpa cupidatat labore voluptate
+            ullamco voluptate culpa sunt nulla non. Ad cupidatat dolore quis amet
+            pariatur consectetur ullamco. Officia quis id velit duis cupidatat
+            sunt deserunt do aliquip nulla laboris.
+        </p>
+        <div class="featured__info-container">
+            <div>
+                <h3 class="featured__label">Tech stack</h3>
+                <ul class="featured__tech-stack">
+                    <li class="featured__info">TailwindCSS</li>
+                    <li class="featured__info">ReactJS</li>
+                    <li class="featured__info">React-hook-form</li>
+                    <li class="featured__info">NextJS</li>
+                    <li class="featured__info">Axios</li>
+                    <li class="featured__info">Supabase</li>
+                    <li class="featured__info">Stripe</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="featured__label">Project type</h3>
+                <p class="featured__info">Fullstack-Jamstack</p>
+            </div>
+            <div>
+                <h3 class="featured__label">Timeline</h3>
+                <p class="featured__info">December 2022 - present</p>
+            </div>
+        </div>
+        <div class="featured__img-container">
+            <div class="featured__img-wrapper">
+                <img
+                        loading="lazy"
+                        class="lazy loading"
+                        src="https://via.placeholder.com/1920x968"
+                        data-src="/slayingthedragon.png"
+                        alt="Slaying The Dragon hero"
+                />
+            </div>
+            <div class="featured__img-wrapper">
+                <img
+                        loading="lazy"
+                        class="lazy loading"
+                        src="https://via.placeholder.com/1920x968"
+                        data-src="/courses.png"
+                        alt="Slaying The Dragon courses"
+                />
+            </div>
+            <div class="featured__img-wrapper">
+                <img
+                        loading="lazy"
+                        class="lazy loading"
+                        src="https://via.placeholder.com/1920x968"
+                        data-src="/pricing.png"
+                        alt="Slaying The Dragon pricing"
+                />
+            </div>
+            <div class="featured__img-wrapper">
+                <img
+                        loading="lazy"
+                        class="lazy loading"
+                        src="https://via.placeholder.com/1920x968"
+                        data-src="/features.png"
+                        alt="Slaying The Dragon features"
+                />
+            </div>
+
+
+
+
+        </div>
+    </section>
+    <section class="work container section">
+        <h2 class="work__title">Мои работы</h2>
+        <p class="work__description">
+            Здесь Вы можете увидеть список моих работ и перейти на них по ссылкам.
+        </p>
+        <div class="work__container">
+            <!-- Project 1 -->
+            <h3 class="work__project-title">Сайт с parallax эффектом.</h3>
+            <div class="work__img-wrapper work__image1">
+                <img
+                        loading="lazy"
+                        class="lazy loading"
+                        src="https://via.placeholder.com/900"
+                        data-src="/pr1.png"
+                        alt="Wax Motif website"
+                />
+            </div>
+            <div class="work__project work__content1">
+                <h3 class="work__project-subtitle">Путешествие по лесу</h3>
+                <p class="work__project-description1">
+                    Сайт с parallax и другими интересными эффектами
+                </p>
+                <p class="work__project-description2">
+                    Вы можете увидеть данный сайт перейдя на него по кнопке.
+                </p>
+                <a class="btn work__project-btn" href="#">Перейти</a>
+            </div>
+            <!-- Project 2 -->
+            <h3 class="work__project-title">Креативная студия дизайна</h3>
+            <div class="work__img-wrapper work__image2">
+                <img
+                        loading="lazy"
+                        class="lazy loading"
+                        src="https://via.placeholder.com/900"
+                        data-src="/drazeforce.png"
+                        alt="Draze Force website"
+                />
+            </div>
+            <div class="work__project work__content2">
+                <h3 class="work__project-subtitle">Креативная студия дизайна</h3>
+                <p class="work__project-description1">
+                    Sunt sint labore officia irure. Dolore pariatur nisi deserunt sunt
+                    exercitation excepteur do reprehenderit fugiat Lorem sint ut.
+                </p>
+                <p class="work__project-description2">
+                    Mollit ipsum mollit magna occaecat eiusmod sint fugiat est non
+                    adipisicing esse fugiat deserunt minim. Enim occaecat velit eu non
+                    amet nostrud officia duis.
+                </p>
+                <a class="btn work__project-btn" href="#">Перейти</a>
+            </div>
+            <!-- Project 3 -->
+            <h3 class="work__project-title">Реклама кроссовок</h3>
+            <div class="work__img-wrapper work__image3">
+                <img
+                        loading="lazy"
+                        class="lazy loading"
+                        src="https://via.placeholder.com/900"
+                        data-src="/artren.png"
+                        alt="Artren website"
+                />
+            </div>
+            <div class="work__project work__content3">
+                <h3 class="work__project-subtitle">Велосипеды</h3>
+                <p class="work__project-description1">
+                    Aliquip eu ad est reprehenderit veniam irure exercitation in velit
+                    enim ipsum.
+                </p>
+                <p class="work__project-description2">
+                    Elit est amet quis incididunt officia velit eiusmod do amet. Sint
+                    non qui nulla sit ex cillum non pariatur velit proident ut aliqua
+                    fugiat incididunt id minim.
+                </p>
+                <a class="btn work__project-btn" href="#">Перейти</a>
+            </div>
+            <!-- Project 4 -->
+            <h3 class="work__project-title">И снова путешествие по лесу</h3>
+            <div class="work__img-wrapper work__image4">
+                <img
+                        loading="lazy"
+                        class="lazy loading"
+                        src="https://via.placeholder.com/900"
+                        data-src="/platformpro.png"
+                        alt="Platform Pro website"
+                />
+            </div>
+            <div class="work__project work__content4">
+                <h3 class="work__project-subtitle">И снова путешествие по лесу</h3>
+                <p class="work__project-description1">
+                    Labore magna ut non labore Lorem nisi culpa sint et quis sint.
+                    Enim pariatur deserunt do ad exercitation.
+                </p>
+                <p class="work__project-description2">
+                    Ea ut non cupidatat consequat sint elit ipsum culpa dolor cillum
+                    commodo. Do esse excepteur cillum deserunt duis incididunt. Eu
+                    tempor ullamco aliqua consectetur incididunt anim dolor sunt
+                    laboris adipisicing cupidatat sint.
+                </p>
+                <a class="btn work__project-btn" href="#">Перейти</a>
+            </div>
+
+        </div>
+    </section>
+    <section id="contact" class="contact container section">
+        <h2 class="contact__title">Как со мной связаться?</h2>
+        <p class="contact__description">
+            Если вы хотите со мной связаться по поводу сотрудничества, моя почта всегда открыта для писем. Я отвечу Вам как можно скорее.
+        </p>
+        <a
+                class="contact__btn btn"
+                href="mailto:sayapinavalentina7@gmail.com"
+                target="_blank"
+        >Отправить письмо</a
+        >
+    </section>
+</main>
+<footer class="footer container section">
+    <h3 class="footer__title">~ Саяпина Валентина ~</h3>
+</footer>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
